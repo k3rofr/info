@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Lupey's Info</title>
+
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/x-icon" href="assets/icons197533886.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+</head>
+
+<body id="body">
+
+    <div class="rain">
+        <div class="drop"></div><div class="drop"></div><div class="drop"></div>
+        <div class="drop"></div><div class="drop"></div><div class="drop"></div>
+        <div class="drop"></div><div class="drop"></div><div class="drop"></div>
+        <div class="drop"></div><div class="drop"></div><div class="drop"></div>
+        <div class="drop"></div><div class="drop"></div><div class="drop"></div>
+        <div class="drop"></div><div class="drop"></div><div class="drop"></div>
+    </div>
+
+    <div id="click" class="click"><h3>Click Here</h3></div>
+
+    <video id="video"></video>
+    <audio id="audio"></audio>
+
+    <div class="center">
+        <div class="below-center">
+            <button id="muteButton"><img src="assets/icons/mute.png" class="muteButton"></button>
+                <script>muteButton.addEventListener("click", () => {audio.muted = !audio.muted});</script>
+
+            <button id="playNext"><img src="assets/icons/playnext.svg"></button>
+                <script>playNext.addEventListener("click", () => {playRandom();});</script>
+
+            <img src="assets/icons/image.png" class="logo" />
+
+            <h1>Lupey</h1>
+            <p class="rainbow-text"> Code>>> </p>
+
+            <div class="links">
+                <a href="https://github.com/Lupeydev" target="_blank">
+                    <img src="assets/icons/Octicons-mark-github.svg" class="Github"/>
+                </a>
+
+                <a href="https://steamcommunity.com/id/lupeygambles/" target="_blank">
+                    <img src="assets/icons/steam-symbol-svgrepo-com.svg" class="Steam"/>
+                </a>
+
+                <a href="https://discord.com/users/1004527420730253332" target="_blank">
+                    <img src="assets/icons/discord.svg" class="Discord"/>
+                </a>
+            </div>
+        </div>
+    </div>
+
+<script>
+const sounds = [
+    "assets/videos/eat.mp4",
+    "assets/videos/timeless.mp4",
+    "assets/videos/yeattt.mp4",
+    "assets/videos/system.mp4",
+    "assets/videos/twerk.mp4",
+    "assets/videos/busy.mp4",
+    "assets/videos/MadeItOnOurOwn.mp4",
+    "assets/videos/Fate.mp4"
+];
+
+let currentIndex = -1;
+
+const video = document.getElementById("video");
+const audio = document.getElementById("audio");
+
+function getRandomIndex() {
+    let newIndex;
+    do {
+        newIndex = Math.floor(Math.random() * sounds.length);
+    } while (newIndex === currentIndex);
+    return newIndex;
+}
+
+function playRandom() {
+    currentIndex = getRandomIndex();
+    const file = sounds[currentIndex];
+
+    video.src = file;
+    audio.src = file;
+
+    video.play();
+    audio.play();
+}
+
+video.addEventListener("ended", playRandom);
+
+window.onclick = function () {
+    playRandom();
+
+    video.volume = 0;
+    audio.volume = 1;
+
+    const click = document.getElementById("click");
+    if (click) click.remove();
+
+    window.onclick = null;
+};
+
+document.addEventListener("keydown", (event) => {
+    if (event.key === "F12" || (event.ctrlKey && event.shiftKey && event.key === "I")) {
+        event.preventDefault();
+        window.open("https://lupeydev.github.io/Info/", "_blank");
+    }
+});
+</script>
+
+</body>
+</html>
