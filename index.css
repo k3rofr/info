@@ -179,7 +179,7 @@ p{
     height: 100%;
     overflow: hidden;
     pointer-events: none;
-    opacity: 50.6;
+    opacity: 100;
 }
 .drop{
     position: absolute;
