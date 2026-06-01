@@ -193,7 +193,7 @@ p{
 }
 @keyframes fall{
     to{
-        transform: translateX(0vh) translateY(100vh) rotate(75deg);
+        transform: translateX(50vh) translateY(100vh) rotate(75deg);
     }
 }
 
