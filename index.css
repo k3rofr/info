@@ -54,116 +54,62 @@ h2{
 }
 .video{
     display:none;
+}.poetsen-one-regular {
+  font-family: "Poetsen One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
-h3{
-    color:white;
-    align-self:center;
-    align-items:center;
-    align-content:center;
-    
-  
-    text-align: center;
-    font-size: 50px;
-    font-family: "Poetsen One";
-    
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+#audio,#video{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+svg{
+    margin-left:2px;
     filter: drop-shadow(0 0 18px rgba(255, 255, 255, 0.9));
-    background: linear-gradient(
-        90deg,
-        #ff0000,
-        #ff7f00,
-        #ffff00,
-        #00ff00,
-        #00ffff,
-        #0000ff,
-        #8b00ff,
-        #ff0000
-    );
-    background-size: 400% 400%;
-
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
-
-    animation: rainbowMove 8s linear infinite;
-}
-
+    color: #1b122e;
 }
 h1{
-    color: white;
-    font-family: "Poetsen One";
+    filter: drop-shadow(0 0 18px rgba(255, 255, 255, 0.9));
 }
-p{
-    font-family: "Poetsen One";
+.logo{
+ width: 75px;
+ height: 75px;
+ border-radius: 50px;
+ opacity: 0.789;
+filter: drop-shadow(0 0 18px rgba(255, 255, 255, 0.9));
 }
-.center{
-  border-radius:20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 10px;
-  background-color: rgba(48, 42, 56, 0.3);
-  background-color: rgba(74, 51, 102)100%;
-  max-width: 420px;
-  width: 90%;
-  font-family: "Poetsen One";
+.music{
+    display:none;
 }
-.below-center{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;      
-  margin-top: 20px;
-}
-#muteButton {
+.click{
+    height:100%;
+    background-color:black;
     position: absolute;
-    top: 10px;
-    left: 10px;
-
-    background: none;
-    border: 5px solid transparent;
-    border-radius: 10px;
-    cursor: pointer;
-    padding: 10px;
-    transition: transform 0.3s;
-    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    width:100%;
+    z-index:12;
+    align-items:center;
+    align-content:center;
+    vertical-align: middle;
 }
-
-#muteButton img {
-    height: 40px;
-    transition: transform 0.2s ease, filter 0.2s ease;
+h2{
+    color:white;
+    font-family: "Poetsen One";
+    align-self: center;
 }
-
-#muteButton img:hover {
-    transform: scale(1.15);
-    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.9));
-}
-
-#playNext {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-
-    background: none;
-    border: 5px solid transparent;
-    border-radius: 10px;
-    cursor: pointer;
-    padding: 10px;
-    transition: transform 0.3s;
-    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
-}
-
-#playNext img {
-    height: 40px;
-    transition: transform 0.2s ease, filter 0.2s ease;
-}
-
-#playNext img:hover {
-    transform: scale(1.15);
-    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.9));
-}
+.video{
+    display:none;
 
 .links{
     display:flex;
@@ -194,24 +140,50 @@ p{
     margin:10px;
     filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.9));
 }
-.rain{     position: absolute;     top: 0;     Left: 0;     width: 100%;     height: 100%;     overflow: hidden;     pointer-events: none;     opacity: 0.6; }.drop {     position: absolute;     bottom: 100%;     width: 2px;     height: 20px;     background: rgba(255, 255, 255, 0);     animation: fall infinite linear;     color: white;     font-size: 30px; }  @keyframes fall {    to {      transform: translateX(0) translateY(100vh) rotate(0deg);    }  }  .drop:nth-child(1) { left: 5%; animation-duration: 5s;}
-.drop:nth-child(2) { left: 15%; animation-duration: 6s;}
-.drop:nth-child(3) { left: 25%; animation-duration: 4s;}
-.drop:nth-child(4) { left: 35%; animation-duration: 8s;}
-.drop:nth-child(5) { left: 45%; animation-duration: 2.5s;}
-.drop:nth-child(6) { left: 55%; animation-duration: 6.5s;}
-.drop:nth-child(7) { left: 65%; animation-duration: 5.8s;}
-.drop:nth-child(8) { left: 75%; animation-duration: 2.9s;}
-.drop:nth-child(9) { left: 85%; animation-duration: 5.2s;}
- .drop:nth-child(10) { left: 95%; animation-duration: 4s;}
-.drop:nth-child(11) { left: 100%; animation-duration: 7s;}
-.drop:nth-child(12) { left: 25%; animation-duration: 6.1s;}
-.drop:nth-child(13) { left: 35%; animation-duration: 5.8s;}
-.drop:nth-child(14) { left: 45%; animation-duration: 4.1s;}
-.drop:nth-child(15) { left: 55%; animation-duration: 2.3s;}
-.drop:nth-child(16) { left: 65%; animation-duration: 1.3s;}
-.drop:nth-child(17) { left: 75%; animation-duration: 2.6s;}
-.drop:nth-child(18) { left: 85%; animation-duration: 5.3s;}
+.rain{
+    position: absolute;
+    top: 0;
+    Left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    opacity: 0.6;
+}
+.drop{
+    position: absolute;
+    bottom: 100%;
+    width: 2px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0);
+    animation: fall ease-out infinite;
+    color: white;
+    font-size: 30px;
+}
+@keyframes fall{
+    to{
+        transform: translateX(50vh) translateY(100vh) rotate(75deg);
+    }
+}
+
+.drop:nth-child(1) { Left: 5%; animation-duration: 5s;}
+.drop:nth-child(2) { Left: 15%; animation-duration: 6s;}
+.drop:nth-child(3) { Left: 25%; animation-duration: 4s;}
+.drop:nth-child(4) { Left: 35%; animation-duration: 8s;}
+.drop:nth-child(5) { Left: 45%; animation-duration: 2.5s;}
+.drop:nth-child(6) { Left: 55%; animation-duration: 6.5s;}
+.drop:nth-child(7) { Left: 65%; animation-duration: 5.8s;}
+.drop:nth-child(8) { Left: 75%; animation-duration: 2.9s;}
+.drop:nth-child(9) { Left: 85%; animation-duration: 5.2s;}
+.drop:nth-child(10) { Left: 95%; animation-duration: 4s;}
+.drop:nth-child(11) { Left: 100%; animation-duration: 7s;}
+.drop:nth-child(12) { Left: 25%; animation-duration: 6.1s;}
+.drop:nth-child(13) { Left: 35%; animation-duration: 5.8s;}
+.drop:nth-child(14) { Left: 45%; animation-duration: 4.1s;}
+.drop:nth-child(15) { Left: 55%; animation-duration: 2.3s;}
+.drop:nth-child(16) { Left: 65%; animation-duration: 1.3s;}
+.drop:nth-child(17) { Left: 75%; animation-duration: 2.6s;}
+.drop:nth-child(18) { Left: 85%; animation-duration: 5.3s;}
 
 .rainbow-text{
     filter: drop-shadow(0 0 18px rgba(255, 255, 255, 0.9));
@@ -244,3 +216,25 @@ p{
         background-position: 100% 50%;
     }
 }
+
+h3{
+    color:white;
+    align-self:center;
+    align-items:center;
+    align-content:center;
+    
+  
+    text-align: center;
+    font-size: 50px;
+    font-family: "Poetsen One";
+    
+    filter: drop-shadow(0 0 18px rgba(255, 255, 255, 0.9));
+    background: linear-gradient(
+        90deg,
+        #ff0000,
+        #ff7f00,
+        #ffff00,
+        #00ff00,
+        #00ffff,
+
+    
