@@ -37,16 +37,19 @@ filter: drop-shadow(0 0 18px rgba(255, 255, 255, 0.9));
 .music{
     display:none;
 }
-.click{
-    height:100%;
-    background-color:black;
-    position: absolute;
-    width:100%;
-    z-index:12;
-    align-items:center;
-    align-content:center;
-    vertical-align: middle;
+.click {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 12;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 h2{
     color:white;
     font-family: "Poetsen One";
